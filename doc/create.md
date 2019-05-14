@@ -1,3 +1,5 @@
+
+# 创建项目
                                                                                                                                                            
 - 进入当前目录
 
@@ -86,9 +88,35 @@ Documentation can be found at https://vuejs-templates.github.io/webpack
 `⚡ npm run dev` 
 
 
+
+# 使用iview
+
 - 安装iview
 `⚡ npm install iview`
 
+
+- 应用iview
+
+在src/main.js 增加如下代码:
+```javascript
+
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+
+Vue.use(iView)
+
+```
+
+在components/HelloWorld.vue里面替换如下iview控件：
+```html
+<Input v-model="value" placeholder="Enter something..." style="width: 300px" />
+```
+
+iview应用成功
+
+
+
+# 使用vuex
 
 
 
