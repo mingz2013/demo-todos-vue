@@ -17,6 +17,13 @@ export default {
       // msg: 'Welcome to Your Vue.js App',
       item: {}
     }
+  },
+  mounted () {
+    this.item = {
+      id: 1,
+      title: 'item1',
+      content: '222222222222222'
+    }
   }
 }
 </script>
