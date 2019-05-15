@@ -1,3 +1,5 @@
 vue
 vue-router
 iview
+axios
+vuex
