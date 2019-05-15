@@ -2,6 +2,9 @@
   <div>
     <CheckboxGroup v-for="item in items" :key="item.title">
       <Checkbox :label="item.title"></Checkbox>
+      <Button @click="onBtnDetailClick( item.id )">detail</Button>
+      <Button @click="onBtnEditClick( item.id )">edit</Button>
+      <Button @click="onBtnRemoveClick( item.id )">remove</Button>
     </CheckboxGroup>
   </div>
 </template>
@@ -27,30 +30,17 @@ export default {
   },
   // 方法集合
   methods: {
-    // getList () {
-    //   this.items = [
-    //     {
-    //       id: '0',
-    //       title: 'item1',
-    //       content: '111111111'
-    //     },
-    //     {
-    //       id: '1',
-    //       title: 'item2',
-    //       content: '111111111'
-    //     },
-    //     {
-    //       id: '2',
-    //       title: 'item3',
-    //       content: '111111111'
-    //     },
-    //     {
-    //       id: '3',
-    //       title: 'item4',
-    //       content: '111111111'
-    //     }
-    //   ]
-    // }
+    onBtnDetailClick (id) {
+      this.$router.push({path: `todos/detail/${id}`})
+    },
+    onBtnEditClick (id) {
+      this.$router.push({path: `todos/edit/${id}`})
+    },
+    onBtnRemoveClick (id) {
+      this.$store.dispatch('removeTodo', id)
+    },
+    onCheckClick () {
+    }
   }
 }
 </script>

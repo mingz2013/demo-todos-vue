@@ -2,7 +2,7 @@
   <div>
     title: <Input v-model="item.title"/>
     content: <Input v-model="item.content" type="textarea"/>
-    <Button>提交</Button>
+    <Button @click="onBtnClick">提交</Button>
   </div>
 </template>
 
@@ -18,11 +18,16 @@ export default {
       }
     }
   },
+  props: ['id'],
   mounted () {
-    this.item = {
-      id: 1,
-      title: 'item1',
-      content: '222222222222222'
+    console.log('mounted')
+    console.log(this.item)
+    this.item = this.$store.getters.getTodoById(this.id) || {}
+    console.log(this.item)
+  },
+  methods: {
+    onBtnClick () {
+      this.$store.dispatch('editTodo', this.item)
     }
   }
 }

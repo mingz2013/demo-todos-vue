@@ -19,12 +19,12 @@ export default {
       }
     }
   },
+  props: ['id'],
   mounted () {
-    this.item = {
-      id: 1,
-      title: 'item1',
-      content: '222222222222222'
-    }
+    console.log('mounted...')
+    console.log(this.item)
+    this.item = this.$store.getters.getTodoById(this.id) || {}
+    console.log(this.item)
   }
 }
 </script>

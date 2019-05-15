@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     onBtnClick () {
-      this.$store.dispatch('addTodo', this.item)
+      this.$store.dispatch('addTodo', Object.assign({}, this.item))
     }
   }
 }

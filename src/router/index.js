@@ -33,10 +33,12 @@ export default new Router({
         },
         {
           path: 'edit/:id',
+          props: true,
           component: Edit
         },
         {
           path: 'detail/:id',
+          props: true,
           component: Detail
         },
         {
