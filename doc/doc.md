@@ -1,5 +1,5 @@
-vue
-vue-router
-iview
-axios
-vuex
+- vue
+- vue-router
+- iview
+- axios
+- vuex
