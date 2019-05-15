@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CheckboxGroup v-for="item in items" :key="item.title" v-model="checkedItems">
+    <CheckboxGroup v-for="item in items" :key="item.title">
       <Checkbox :label="item.title"></Checkbox>
     </CheckboxGroup>
   </div>
@@ -12,40 +12,45 @@ export default {
   data () {
     return {
       // msg: 'Welcome to Your Vue.js App',
-      items: [],
-      checkedItems: []
+      // items: [],
+      // checkedItems: []
     }
   },
   mounted () {
     // 加载
-    this.getList()
+    // this.getList()
+  },
+  computed: {
+    items () {
+      return this.$store.state.todos.todos
+    }
   },
   // 方法集合
   methods: {
-    getList () {
-      this.items = [
-        {
-          id: '0',
-          title: 'item1',
-          content: '111111111'
-        },
-        {
-          id: '1',
-          title: 'item2',
-          content: '111111111'
-        },
-        {
-          id: '2',
-          title: 'item3',
-          content: '111111111'
-        },
-        {
-          id: '3',
-          title: 'item4',
-          content: '111111111'
-        }
-      ]
-    }
+    // getList () {
+    //   this.items = [
+    //     {
+    //       id: '0',
+    //       title: 'item1',
+    //       content: '111111111'
+    //     },
+    //     {
+    //       id: '1',
+    //       title: 'item2',
+    //       content: '111111111'
+    //     },
+    //     {
+    //       id: '2',
+    //       title: 'item3',
+    //       content: '111111111'
+    //     },
+    //     {
+    //       id: '3',
+    //       title: 'item4',
+    //       content: '111111111'
+    //     }
+    //   ]
+    // }
   }
 }
 </script>

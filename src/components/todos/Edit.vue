@@ -12,7 +12,10 @@ export default {
   data () {
     return {
       // msg: 'Welcome to Your Vue.js App',
-      item: {}
+      item: {
+        title: '',
+        content: ''
+      }
     }
   },
   mounted () {
