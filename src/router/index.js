@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+// import HelloWorld from '@/components/HelloWorld'
 
 import Index from '@/components/todos/Index'
 import List from '@/components/todos/List'
@@ -14,8 +14,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      // name: 'HelloWorld',
+      // component: HelloWorld
+      redirect: '/todos'
     },
     {
       path: '/todos',
