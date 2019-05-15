@@ -120,3 +120,52 @@ iview应用成功
 
 
 
+`⚡ npm install vuex --save`
+
+```
+npm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.
+
++ vuex@3.1.1
+added 1 package from 1 contributor and audited 31719 packages in 8.966s
+found 84 vulnerabilities (65 low, 8 moderate, 10 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+zhaojm@avril /Users/zhaojm/projects/demo-todos-vue                                                                                                                                     master
+⚡ 
+```
+
+main.js中加入如下引用
+
+```javascript
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
+
+```
+
+
+# 使用axios
+
+`⚡ npm install --save axios vue-axios`
+```
+npm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.
+
++ vue-axios@2.1.4
++ axios@0.18.0
+added 2 packages from 2 contributors and audited 31725 packages in 7.643s
+found 84 vulnerabilities (65 low, 8 moderate, 10 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+zhaojm@avril /Users/zhaojm/projects/demo-todos-vue                                                                                                                                     master
+⚡ 
+```
+
+main.js中加入如下引用
+```javascript
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
+```
+
+
