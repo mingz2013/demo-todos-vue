@@ -27,7 +27,11 @@ export default {
   },
   methods: {
     onBtnClick () {
-      this.$store.dispatch('editTodo', this.item)
+      this.$store.dispatch('editTodo', this.item).then(todo => {
+        this.$Message.success('success')
+      }).catch(error => {
+        this.$Message.error(error.detail || error)
+      })
     }
   }
 }

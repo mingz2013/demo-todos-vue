@@ -17,7 +17,11 @@ export default {
   },
   methods: {
     onBtnClick () {
-      this.$store.dispatch('addTodo', Object.assign({}, this.item))
+      this.$store.dispatch('addTodo', Object.assign({}, this.item)).then(todo => {
+        this.$Message.success('success')
+      }).catch(error => {
+        this.$Message.error(error.detail || error)
+      })
     }
   }
 }

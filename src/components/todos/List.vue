@@ -21,7 +21,7 @@ export default {
   },
   mounted () {
     // 加载
-    // this.getList()
+    this.getList()
   },
   computed: {
     items () {
@@ -37,9 +37,20 @@ export default {
       this.$router.push({path: `todos/edit/${id}`})
     },
     onBtnRemoveClick (id) {
-      this.$store.dispatch('removeTodo', id)
+      this.$store.dispatch('removeTodo', id).then(id => {
+        this.$Message.success('success')
+      }).catch(error => {
+        this.$Message.error(error.detail || error)
+      })
     },
     onCheckClick () {
+    },
+    getList () {
+      this.$store.dispatch('getTodos').then(todos => {
+        this.$Message.success('success')
+      }).catch(error => {
+        this.$Message.error(error.detail || error)
+      })
     }
   }
 }
