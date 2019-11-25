@@ -2,7 +2,7 @@
 - vue-router 路由
 - iview UI库
 - axios 网络
-- vuex  redux架构
+- vuex  redux单向数据流架构
 
 
 
