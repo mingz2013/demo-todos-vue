@@ -1,8 +1,8 @@
-- vue
-- vue-router
-- iview
-- axios
-- vuex
+- vue 
+- vue-router 路由
+- iview UI库
+- axios 网络
+- vuex  redux架构
 
 
 
