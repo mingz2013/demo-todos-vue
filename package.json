@@ -2,7 +2,7 @@
   "name": "demo-todos-vue",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "mingz <305603665@qq.com>",
+  "author": "mingz <mingzz2013@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
