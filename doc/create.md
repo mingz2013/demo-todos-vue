@@ -14,7 +14,7 @@
 ? Generate project in current directory? Yes
 ? Project name demo-todos-vue
 ? Project description A Vue.js project
-? Author mingz <305603665@qq.com>
+? Author mingz <mingzz2013@gmail.com>
 ? Vue build standalone
 ? Install vue-router? Yes
 ? Use ESLint to lint your code? Yes
